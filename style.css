@@ -1,0 +1,226 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root{
+   --color-darkest:#570A17;
+   --color-darker:#8A1125;
+   --color-dark:#BD1732;
+   --color-primary:#f01d40;
+   --color-light:#f04f68;
+   --color-lighter:#f07d90;
+   --color-lightest:#f0adb8;
+
+   --color-gray1:#F7F5F5;
+/*    --color-gray1:#EBE4E5; */
+   --color-gray2:#CCB4B9;
+   --color-gray3:#241215;
+
+   --color-greenlite1:#C9F0AD;
+   --color-greenlite2:#91F04D;
+   --color-greenlite3:#75F01D;
+   --color-greenlite4:#5CBD17;
+}
+
+body{
+   font-family: 'Open sans',sans-serif;
+   background-color: #26262D;
+}
+
+
+
+   main{
+       margin: calc(50px + 5%) 5% 0% 5%;
+   }
+
+   .main-container{
+    max-width: 375px;
+    margin: 0 auto;
+   }
+   
+   header{
+      height: 50px;
+      width: 100%;
+      background-color: var(--color-darker);
+      text-align: center;
+      line-height: 50px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+   }
+   header h2{
+      font-weight:500;
+      color: var(--color-gray1);
+   }
+   
+   .infos{
+      display: flex;
+      justify-content: space-between;
+      /* border: 1px solid red; */
+      gap: 5px;
+   }
+   
+   .timer-container{
+      padding: 1.2%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 70%;
+      /* border: 1px solid red; */
+      background-color: var(--color-gray1);
+      border-radius: 5px;
+   }
+   .timer-container meter{
+      width: 90%;
+   }
+
+   meter::-webkit-meter-optimum-value{
+      background-color: var(--color-greenlite4);
+   }
+
+   meter::-webkit-meter-bar{
+      background-color: var(--color-greenlite1);
+   }
+
+
+
+
+   
+   .lifeContainer{
+      padding: 2%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 30%;
+      /* border: 1px solid red; */
+      background-color: var(--color-gray1);
+      border-radius: 5px;
+   }
+   
+   .lifeIcons{
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      /* border: 1px solid blue; */
+   }
+   
+   .lifeIcons i{
+      font-size: 1.1em;
+   }
+   
+   /* Syllable Container */
+   .syllableContainer{
+      display: flex;
+      height: 180px;
+      justify-content: center;
+      align-items: center;
+      margin: 4% 2% 3% 2%;
+      background-color: var(--color-gray1);
+      border-radius: 5px;
+   }
+   .syllableContainer strong{
+      font-size: 3.5rem;
+      color: var(--color-gray3);
+   }
+   
+   .choicesContainer{
+      margin: 0 2%;
+      padding:2%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 320px;
+      background-color: var(--color-gray1);
+      border-radius: 5px;
+      gap: 4px;
+   }
+   
+   .choicesContainer > div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 4px;
+   }
+
+   .choicesContainer button{
+      width: 70px;
+      height: 70px;
+      font-size: 1.2rem;
+      color: var(--color-gray3);
+   }
+   
+
+.green-heart{
+   color:var(--color-greenlite4);
+}
+.red-heart{
+   color: var(--color-primary);
+}
+
+.correct{
+   background-color: var(--color-greenlite2);
+   border: none;
+   outline: none;
+}
+
+.wrong{
+   background-color: var(--color-light);
+   border: none;
+   outline: none;
+}
+
+
+
+
+/* POP UP WINDOW WHEN CLICKED */
+.modalContainer{
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, .7);
+   position: fixed;
+   top: 0;
+   left: 0;
+   cursor: pointer;
+   z-index: 100;
+   display: flex;
+   justify-content:center;
+   align-items: center;
+ }
+
+ .modal{
+  max-width: 375px; 
+  margin: 0 auto;
+   width: 80%;
+   height: 40%;
+   display:flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-direction: column;
+   background-color: #fff;
+   border-radius: 5px;
+ }
+
+
+ .modal p{
+   text-align: center;
+   color: var(--color-dark);
+   font-weight: 800;
+   font-size: 1.8rem;
+ }
+
+ .modal input{
+   padding: .5em 1em;
+   font-size: 1.1rem;
+   font-weight: 600;
+   background-color: var(--color-greenlite3);
+   border-radius: 5px;
+   border: none;
+   outline: none;
+   color: #333;
+}
